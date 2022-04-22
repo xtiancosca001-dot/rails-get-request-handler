@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>IMonggo C3 <code>GET</code> requests</h1>
+
+<div id="im_get_requests">
+  <% @im_get_requests.each do |im_get_request| %>
+    <%= render im_get_request %>
+    <p>
+      <%= link_to "Show this im get request", im_get_request %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New im get request", new_im_get_request_path %>

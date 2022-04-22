@@ -1,0 +1,37 @@
+<%= form_with(model: im_get_request) do |form| %>
+  <% if im_get_request.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(im_get_request.errors.count, "error") %> prohibited this im_get_request from being saved:</h2>
+
+      <ul>
+        <% im_get_request.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :username, style: "display: block" %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label 'Password', style: "display: block" %>
+    <%= form.password_field :pwd %>
+  </div>
+
+  <div>
+    <%= form.label 'Product ID', style: "display: block" %>
+    <%= form.text_field :prodID %>
+  </div>
+
+  <div>
+    <%= form.label 'API Token ID', style: "display: block" %>
+    <%= form.text_field :tokenID %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

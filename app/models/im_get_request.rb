@@ -1,0 +1,2 @@
+class ImGetRequest < ApplicationRecord
+end

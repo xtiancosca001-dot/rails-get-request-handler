@@ -1,0 +1,19 @@
+<div id="<%= dom_id im_get_request %>">
+  <p>
+    <strong>Username:</strong>
+    <%= im_get_request.username %>
+  </p>
+
+  <% if im_get_request.prodID != "" %>
+  <p>
+    <strong>Prodid:</strong>
+    <%= im_get_request.prodID %>
+  </p>
+  <% end %>
+
+  <p>
+    <strong>Tokenid:</strong>
+    <%= im_get_request.tokenID %>
+  </p>
+
+</div>

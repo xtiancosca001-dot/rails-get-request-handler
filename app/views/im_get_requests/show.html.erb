@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @im_get_request %>
+
+<div>
+  <%= link_to "Edit this im get request", edit_im_get_request_path(@im_get_request) %> |
+  <%= link_to "Back to im get requests", im_get_requests_path %>
+
+  <%= button_to "Destroy this im get request", @im_get_request, method: :delete %>
+
+  <hr>
+
+  <h2>Request Response</h2>
+  <%= processRequest @im_get_request.username, @im_get_request.pwd, @im_get_request.prodID, @im_get_request.tokenID  %>
+
+</div>
